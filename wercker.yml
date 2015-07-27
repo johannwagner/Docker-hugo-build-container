@@ -1,4 +1,9 @@
-box: wercker-labs/docker
+box: node
 build:
   steps:
-    - nhuray/docker-build
+    - wercker/npm-install:
+        options: "validate-dockerfile -g"
+    - script:
+        name: validate dockerfile
+        code: |
+            docklint

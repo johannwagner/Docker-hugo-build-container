@@ -40,3 +40,6 @@ RUN dpkg -i /tmp/hugo_*.deb
 
 # slim down image
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# echo hugo version
+CMD hugo version
