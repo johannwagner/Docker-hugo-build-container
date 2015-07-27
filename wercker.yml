@@ -1,7 +1,6 @@
 box: wercker-labs/docker
 build:
   steps:
-    - nhuray/docker-build
+    - nhuray/docker-build:
         tag: ${WERCKER_GIT_COMMIT:0:7}
-		force-rm: true
-	
+        force-rm: true
