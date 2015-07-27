@@ -33,3 +33,6 @@ RUN npm install html-minifier -g
 
 # install yuicompressor
 RUN npm install yuicompressor -g
+
+# slim down image
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
