@@ -33,5 +33,8 @@ RUN dpkg -i /tmp/hugo_*.deb
 # install html-minifier
 RUN npm install html-minifier -g
 
+# install html-proofer
+RUN gem install html-proofer -N
+
 # slim down image
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
