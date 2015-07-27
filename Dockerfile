@@ -10,9 +10,11 @@ WORKDIR /root/work/
 
 # install required packages
 RUN apt-get -y update && apt-get -y install \
+	apt-transport-https \
 	build-essential \
 	curl \
 	git \
+	lsb-release \
 	openjdk-7-jre \
 	python-pip \
 	ruby \
