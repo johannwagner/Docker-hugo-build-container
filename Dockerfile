@@ -1,6 +1,8 @@
 FROM debian:latest
+MAINTAINER Samuel Debruyn <s@muel.be>
 
-ENV HUGO_VERSION 0.14
+ENV HUGO_VERSION 0.14 
+ENV DEBIAN_FRONTEND noninteractive
 
 # install required packages
 RUN apt-get -y update && apt-get -y install \
@@ -14,7 +16,7 @@ RUN apt-get -y update && apt-get -y install \
 	wget
 
 # install hugo	
-RUN wget https://github.com/spf13/hugo/releases/download/$HUGO_VERSION/hugo_$HUGO_VERSION_amd64.deb -O hugo.deb && dpkg-i hugo.deb && rm hugo.deb
+RUN wget https://github.com/spf13/hugo/releases/download/${HUGO_VERSION}/hugo_${HUGO_VERSION}_amd64.deb -O hugo.deb && dpkg-i hugo.deb && rm hugo.deb
 
 # install pygments
 RUN pip install Pygments
