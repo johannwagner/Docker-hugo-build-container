@@ -30,5 +30,8 @@ RUN apt-get -y update && apt-get -y install \
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_amd64.deb /tmp/
 RUN dpkg -i /tmp/hugo_*.deb
 
+# install html-minifier
+RUN npm install html-minifier -g
+
 # slim down image
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
