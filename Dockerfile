@@ -5,5 +5,6 @@ RUN apt-get -y update && apt-get -y install \
 	curl \
 	git \
 	openjdk-7-jre \
-	ruby2.1 \
+	ruby \
+	rubygems \
 	wget
