@@ -4,6 +4,10 @@ MAINTAINER Samuel Debruyn <s@muel.be>
 ENV HUGO_VERSION 0.14
 ENV DEBIAN_FRONTEND noninteractive
 
+# setup workdir
+RUN mkdir -p /root/work/
+WORKDIR /root/work/
+
 # install required packages
 RUN apt-get -y update && apt-get -y install \
 	build-essential \
