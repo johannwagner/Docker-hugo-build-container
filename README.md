@@ -2,9 +2,7 @@
 
 A docker container to build, test and minify hugo websites with wercker.
 
-[![layers](https://badge.imagelayers.io/samueldebruyn/hugo-build:latest.svg "layers")](https://imagelayers.io/?images=samueldebruyn/hugo-build:latest)
-
-[![wercker status](https://app.wercker.com/status/8afdbf4994c7db1948a47dfd28304863/s/master "wercker status")](https://app.wercker.com/project/bykey/8afdbf4994c7db1948a47dfd28304863)
+[![layers](https://badge.imagelayers.io/samueldebruyn/hugo-build:latest.svg "layers")](https://imagelayers.io/?images=samueldebruyn/hugo-build:latest) [![wercker status](https://app.wercker.com/status/8afdbf4994c7db1948a47dfd28304863/s/master "wercker status")](https://app.wercker.com/project/bykey/8afdbf4994c7db1948a47dfd28304863)
 
 *Please ignore the ~~failing~~ builds until [this issue](https://github.com/Runnable/validate-dockerfile/issues/17) is resolved.*
 
