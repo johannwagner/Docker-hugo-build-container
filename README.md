@@ -1,6 +1,6 @@
 # hugo-build
 
-A docker container to build and test hugo sites.
+A docker container to build, test and minify hugo websites with wercker.
 
 [![layers](https://badge.imagelayers.io/samueldebruyn/hugo-build:latest.svg "layers")](https://imagelayers.io/?images=samueldebruyn/hugo-build:latest)
 
