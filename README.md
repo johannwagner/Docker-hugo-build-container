@@ -26,6 +26,11 @@ The following packages and its dependencies are installed:
 * [yuicompressor](https://github.com/yui/yuicompressor) (Java)
 * wget
 
+## Recommended wercker steps
+
+* [samueldebruyn/minify](https://app.wercker.com/#applications/55b127f1f32b86a9291fe992/tab/details)
+* [kyleboyle/html-proofer-test](https://app.wercker.com/#applications/54e78c6cd9b14636630e8c10/tab/details)
+
 ## Example *wercker.yml*
 
 *This is taken from [my own hugo site](https://github.com/SamuelDebruyn/sa.muel.be-hugo).*
