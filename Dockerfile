@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Samuel Debruyn <s@muel.be>
 
-ENV HUGO_VERSION 0.14
+ENV HUGO_VERSION 0.15
 ENV DEBIAN_FRONTEND noninteractive
 
 # setup workdir
