@@ -27,6 +27,9 @@ RUN apt-get -y update && apt-get -y install \
 	wget \
 	yui-compressor \
 	zlib1g-dev
+	
+# update npm
+RUN npm install npm -g
 
 # install html-minifier
 RUN npm install html-minifier -g
