@@ -16,11 +16,12 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 RUN echo 'deb https://deb.nodesource.com/node_0.12 jessie main' > /etc/apt/sources.list.d/nodesource.list
 RUN echo 'deb-src https://deb.nodesource.com/node_0.12 jessie main' >> /etc/apt/sources.list.d/nodesource.list
 
-# install required packages (zlib1g-dev is required for nokogiri, a dependency of html-proofer)
+# install required packages (zlib1g-dev is required for nokogiri, a dependency of html-proofer, optipng helps you optimize images)
 RUN apt-get -y update && apt-get -y install \
 	build-essential \
 	git \
 	nodejs \
+    optipng \
 	python-pygments \
 	ruby \
 	ruby-dev \
