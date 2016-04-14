@@ -31,7 +31,7 @@ The following packages and its dependencies are installed:
 
 ## Example *wercker.yml*
 
-*This is taken from [my own hugo site](https://github.com/SamuelDebruyn/sa.muel.be-hugo).*
+*This is taken from [my own hugo site](https://github.com/SamuelDebruyn/chipsncookies-site).*
 
 	build:
 	  box: samueldebruyn/hugo-build
@@ -45,6 +45,3 @@ The following packages and its dependencies are installed:
 	        code: |
 	            hugo
 	    - samueldebruyn/minify
-	    - kyleboyle/html-proofer-test:
-	        basedir: public
-	        arguments: --check-external-hash --href-ignore /https?:\/\/sa.muel.be.*/ig
