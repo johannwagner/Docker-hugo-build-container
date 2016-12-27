@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch-slim
 MAINTAINER Samuel Debruyn <s@muel.be>
 
 ENV HUGO_VERSION 0.18
