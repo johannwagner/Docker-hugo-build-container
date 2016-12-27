@@ -1,7 +1,7 @@
 FROM debian:stable
 MAINTAINER Samuel Debruyn <s@muel.be>
 
-ENV HUGO_VERSION 0.18
+ENV HUGO_URL "https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb"
 ENV DEBIAN_FRONTEND noninteractive
 
 # setup workdir
@@ -20,7 +20,7 @@ RUN apt-get -y update && apt-get -y install \
 	yui-compressor
 
 # install hugo
-ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_amd64.deb /tmp/
+ADD ${HUGO_URL} /tmp/
 RUN dpkg -i /tmp/hugo_*.deb
 
 # slim down image
