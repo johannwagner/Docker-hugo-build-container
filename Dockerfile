@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:stable-slim
 MAINTAINER Samuel Debruyn <s@muel.be>
 
 ENV HUGO_VERSION 0.18
@@ -14,27 +14,21 @@ RUN apt-get -y update && apt-get -y install curl apt-transport-https gnupg
 # add sources for nodeJS
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
-# install required packages (zlib1g-dev is required for nokogiri, a dependency of html-proofer, optipng helps you optimize images)
+# install required packages (optipng helps you optimize images)
 RUN apt-get -y update && apt-get -y install \
 	build-essential \
 	git \
 	nodejs \
     	optipng \
 	python-pygments \
-	ruby \
-	ruby-dev \
 	wget \
-	yui-compressor \
-	zlib1g-dev
+	yui-compressor
 	
 # update npm
 RUN npm install npm -g
 
 # install html-minifier
 RUN npm install html-minifier -g
-
-# install html-proofer
-RUN gem install html-proofer -N
 
 # install hugo
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_amd64.deb /tmp/
