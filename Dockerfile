@@ -12,7 +12,7 @@ WORKDIR /root/work/
 RUN apt-get -y update && apt-get -y install curl apt-transport-https
 
 # add sources for nodeJS
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
 # install required packages (zlib1g-dev is required for nokogiri, a dependency of html-proofer, optipng helps you optimize images)
 RUN apt-get -y update && apt-get -y install \
