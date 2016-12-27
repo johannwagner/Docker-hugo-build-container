@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 MAINTAINER Samuel Debruyn <s@muel.be>
 
 ENV HUGO_VERSION 0.18
@@ -12,16 +12,14 @@ WORKDIR /root/work/
 RUN apt-get -y update && apt-get -y install curl apt-transport-https
 
 # add sources for nodeJS
-RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-RUN echo 'deb https://deb.nodesource.com/node_0.12 jessie main' > /etc/apt/sources.list.d/nodesource.list
-RUN echo 'deb-src https://deb.nodesource.com/node_0.12 jessie main' >> /etc/apt/sources.list.d/nodesource.list
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 # install required packages (zlib1g-dev is required for nokogiri, a dependency of html-proofer, optipng helps you optimize images)
 RUN apt-get -y update && apt-get -y install \
 	build-essential \
 	git \
 	nodejs \
-    optipng \
+    	optipng \
 	python-pygments \
 	ruby \
 	ruby-dev \
