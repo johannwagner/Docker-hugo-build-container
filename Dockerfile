@@ -9,7 +9,7 @@ RUN mkdir -p /root/work/
 WORKDIR /root/work/
 
 # install curl and apt-transport-https
-RUN apt-get -y update && apt-get -y install curl apt-transport-https gnpug
+RUN apt-get -y update && apt-get -y install curl apt-transport-https gnupg
 
 # add sources for nodeJS
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
