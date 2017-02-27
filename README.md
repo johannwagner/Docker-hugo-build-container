@@ -15,5 +15,6 @@ The following packages and its dependencies are installed:
 * curl
 * git
 * hugo
-* [yuicompressor](https://github.com/yui/yuicompressor) (Java)
-* wget
+* mercurial
+* golang
+* python-pygments
