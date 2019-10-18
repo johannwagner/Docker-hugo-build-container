@@ -1,7 +1,7 @@
 FROM debian:stable
-MAINTAINER Samuel Debruyn <s@muel.be>
+MAINTAINER Johann Wagner <johann@wagnerdevelopment.de>
 
-ENV HUGO_URL "https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.deb"
+ENV HUGO_URL "https://github.com/gohugoio/hugo/releases/download/v0.58.3/hugo_0.58.3_Linux-64bit.deb"
 ENV DEBIAN_FRONTEND noninteractive
 
 # setup workdir
